@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Start writing your blog...</h1>
+    <form action="addblog" method="post" class="p-2 m-2">
+        {% csrf_token %}
+        <input class=" m-2 form-control type="text" name="email" placeholder="Enter your email">
+        <input class=" m-2 form-control type="text" name="role" placeholder="Student/Teacher">
+        <input class=" m-2 form-control" type="file" name="img" accept="image/*">
+        <textarea class="p-2 m-2 w-100 vh-100 border-0" style="outline: none;" autofocus name="blog" placeholder="Start writing" required></textarea>
+        <button class="btn btn-success" type="submit">Publish</button>
+    </form>
+</div>
+
+{% endblock %}

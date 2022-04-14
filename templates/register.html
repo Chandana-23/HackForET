@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form class="container mt-2" action="add" method="post">
+    {% csrf_token %}
+    <div >
+      <div class="row justify-content-center mt-2">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <label for="inputName" class="form-label">Name</label>
+          <input type="text" class="form-control" name="name" id="inputName">
+        </div>
+      </div>
+      <div class="row justify-content-center mt-2">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" id="inputEmail4">
+        </div>
+      </div>
+      <div class="row justify-content-center mt-2">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input type="password" class="form-control" name="pwd" id="inputPassword4">
+      </div>
+      </div>
+      <div class="row justify-content-center mt-2">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <label for="inputPassword4" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" name="cpwd" id="inputPassword4">
+        </div>
+      </div>
+      <div class="row justify-content-center mt-2">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+      <label for="inputState" class="form-label">Role</label>
+      <select id="inputState" name="role" class="form-select">
+          <option selected value="student">Student</option>
+          <option value="teacher">Teacher</option>
+      </select>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-2">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <label for="inputState" class="form-label">Branch/Department</label>
+        <select id="inputState" name="branch" class="form-select">
+          <option selected value="cse">CSE</option>
+          <option value="ece">ECE</option>
+          <option value="it">IT</option>
+        </select>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-2">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <label for="inputZip" class="form-label">Contact</label>
+        <input type="text" name="contact" class="form-control" id="inputZip">
+      </div>
+    </div>
+      <div class="row justify-content-center mt-2">
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+        <button type="submit" class="btn btn-primary">Register</button>
+      </div>
+    </div>
+    </div>
+    
+  </form>
+
+
+{% endblock %}
